@@ -1,4 +1,4 @@
-var sql = require("mysql");
+var mysql = require("mysql");
 var inquirer = require("inquirer"); 
 
 var connection = mysql.createConnection({
@@ -27,7 +27,7 @@ connection.query("SELECT * FROM products", function(err,res){
 inquirer.prompt([
   {
     type: 'list',
-    name: 'theme',
+    name: 'items',
     message: 'Which product would you like to buy?',
     choices: [
       '1',
@@ -41,4 +41,13 @@ inquirer.prompt([
       '9',
       '10'
       ]
+}]);
+
+inquirer.prompt([
+{
+	type: 'input',
+	name: 'quantity',
+	message: 'How many would you like?',
+
+
 }]);

@@ -2,7 +2,7 @@ CREATE DATABASE Bamazon
 USE Bamazon
 
 CREATE TABLE products (
-id integer(3) auto_increment not null,
+id integer(10) auto_increment not null,
 product_name varchar(50), 
 department_name varchar(15),
 price decimal(5,2),
